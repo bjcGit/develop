@@ -1,0 +1,63 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type ACTIECONBK {
+  ACECTIAC: String!
+  ACECACTI: String!
+  ACECDESC: String
+  ACECUNID: String
+  ACECVERS: Float
+}
+
+type Account {
+  _id: String!
+  ID: Int
+  FIRST_NAME: String!
+  LAST_NAME: String!
+  USERNAME: String!
+  COMPANY: String!
+  CREATED_DATE: String!
+  UPDATE_TS: DateTime!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type ActieconBk_entitie {
+  _id: String!
+  ACECTIAC: String
+  ACECACTI: String!
+  ACECDESC: String!
+  ACECUNID: String!
+  ACECVERS: Float!
+}
+
+type VW_ESTAPOWER_RECAUDO {
+  TERCDESC: String!
+  ANIO: String
+  MES: String
+  MODPFEPA: String!
+  HORAS: String
+  MODPTIIM: String!
+  MODPENFI: String
+  ENFIDESC: String!
+  VALOR: Float
+  TOTA_DESCTO: Float
+}
+
+type Query {
+  ACTIECONBK_ALL: [ACTIECONBK!]!
+  ALLACCOUNTS: [Account!]!
+  ACTIECON_BK_MONGO: [ActieconBk_entitie!]!
+  Get_Oracle: [VW_ESTAPOWER_RECAUDO!]!
+}
+
+type Mutation {
+  TRANSFERENCIA_SIN_VALI: String!
+  TRANSFE_VALI: String!
+  TRANSFE_VALI_RECAUDO: String!
+  TRANSFE_RECAUDO: String!
+}
